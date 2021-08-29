@@ -25,15 +25,17 @@ const toggle = useToggle(dark);
     </app-button>
 
     <app-button
-      class="text-xl focus:ring-purple-900"
-      :class="{
-        'bg-gray-300 text-gray-800': !dark,
-        'bg-gray-800 text-gray-100': dark,
-      }"
+      class="text-xl focus:ring-purple-900 bg-gray-300 dark:bg-gray-800"
       @click="toggle"
     >
       <svg-icon v-show="!dark" name="sun" width="28" height="28" />
-      <svg-icon v-show="dark" name="moon" width="28" height="28" color="#ddd" />
+      <svg-icon
+        v-show="dark"
+        name="moon"
+        width="28"
+        height="28"
+        class="text-gray-200"
+      />
     </app-button>
   </div>
 </template>
