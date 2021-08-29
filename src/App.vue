@@ -1,7 +1,7 @@
 <script setup>
 import { watch } from 'vue';
 import { useI18n } from 'vue-i18n';
-import useDarkMode from './composables/useDarkMode';
+import { useDark } from '@vueuse/core';
 import i18n, { loadLocaleMessages, setI18nLanguage } from './translations';
 
 // i18n dynamic loader
@@ -13,7 +13,7 @@ watch(useI18n().locale, async (locale) => {
   setI18nLanguage(i18n, locale);
 });
 
-useDarkMode().dark.value = true;
+useDark();
 </script>
 
 <template>
@@ -24,19 +24,16 @@ useDarkMode().dark.value = true;
       py-24
       min-h-100vh
       transition-colors
-      duration-100
       dark:bg-dark-900 dark:text-light-900
     "
   >
     <div class="space-x-4 mb-12">
-      <router-link
-        class="hover:opacity-50 transition-opacity duration-100 underline"
-        to="/"
+      <router-link class="hover:opacity-50 transition-opacity underline" to="/"
         >home</router-link
       >
 
       <router-link
-        class="hover:opacity-50 transition-opacity duration-100 underline"
+        class="hover:opacity-50 transition-opacity underline"
         to="/about"
         >about</router-link
       >

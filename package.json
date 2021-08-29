@@ -7,7 +7,7 @@
     "format": "prettier .  --write"
   },
   "dependencies": {
-    "lodash-es": "^4.17.21",
+    "@vueuse/core": "^6.0.0",
     "vue": "^3.2.6",
     "vue-i18n": "^9.1.7",
     "vue-router": "^4.0.11"

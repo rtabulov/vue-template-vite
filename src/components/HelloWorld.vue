@@ -1,19 +1,27 @@
 <script setup>
+import { useDark, useToggle } from '@vueuse/core';
 import { ref } from 'vue';
-import useDarkMode from '../composables/useDarkMode';
 
 const count = ref(0);
-const { toggle, dark } = useDarkMode();
+const dark = useDark();
+const toggle = useToggle(dark);
 </script>
 
 <template>
   <div class="space-x-4 flex items-center justify-center">
     <app-button
-      class="text-xl bg-green-600 text-gray-100 focus:ring-green-900"
+      class="
+        text-xl
+        bg-green-600
+        text-gray-100
+        transition-colors
+        focus:ring-green-900
+        dark:focus:ring-gray-800 dark:bg-green-900
+      "
       @click="count++"
     >
       {{ $t('hello') }}:
-      <span class="font-medium">{{ count }}</span>
+      <span class="font-medium font-mono">{{ count }}</span>
     </app-button>
 
     <app-button
