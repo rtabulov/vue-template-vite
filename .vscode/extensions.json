@@ -3,6 +3,7 @@
     "johnsoncodehk.volar",
     "lokalise.i18n-ally",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "voorjaar.windicss-intellisense"
   ]
 }
