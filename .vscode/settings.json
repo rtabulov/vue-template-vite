@@ -1,0 +1,11 @@
+{
+  "i18n-ally.localesPaths": ["src/translations/messages"],
+  "i18n-ally.displayLanguage": "en",
+  "i18n-ally.sourceLanguage": "en",
+  "volar.codeLens.pugTools": false,
+  "volar.codeLens.scriptSetupTools": false,
+  "volar.tsPluginStatus": false,
+  "volar.preferredAttrNameCase": "kebab",
+  "volar.preferredTagNameCase": "kebab",
+  "i18n-ally.keystyle": "nested"
+}
