@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useDark } from '@vueuse/core';
 
-useDark().value = true;
+useDark();
 </script>
 
 <template>

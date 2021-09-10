@@ -14,7 +14,6 @@ const toggle = useToggle(dark);
         text-xl
         bg-green-600
         text-gray-100
-        transition-colors
         focus:ring-green-900
         dark:focus:ring-gray-800 dark:bg-green-900
       "
