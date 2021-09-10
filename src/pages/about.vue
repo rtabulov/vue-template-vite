@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const links = [
   {
     href: 'https://github.com/vueuse/vueuse',

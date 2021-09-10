@@ -1,19 +1,7 @@
-<script setup>
-import { watch } from 'vue';
-import { useI18n } from 'vue-i18n';
+<script setup lang="ts">
 import { useDark } from '@vueuse/core';
-import i18n, { loadLocaleMessages, setI18nLanguage } from './translations';
 
-// i18n dynamic loader
-watch(useI18n().locale, async (locale) => {
-  if (!i18n.global.availableLocales.includes(locale)) {
-    await loadLocaleMessages(i18n, locale);
-  }
-
-  setI18nLanguage(i18n, locale);
-});
-
-useDark();
+useDark().value = true;
 </script>
 
 <template>
