@@ -1,8 +1,12 @@
 <script setup lang="ts">
+import { useCounter } from '@/store';
 import { useDark, useToggle } from '@vueuse/core';
-import { ref } from 'vue';
+import { storeToRefs } from 'pinia';
 
-const count = ref(0);
+const store = useCounter();
+const { counter: count } = storeToRefs(store);
+const { increment } = store;
+
 const dark = useDark();
 const toggle = useToggle(dark);
 </script>
@@ -17,7 +21,7 @@ const toggle = useToggle(dark);
         focus:ring-green-900
         dark:focus:ring-gray-800 dark:bg-green-900
       "
-      @click="count++"
+      @click="increment"
     >
       {{ $t('hello') }}:
       <span class="font-medium font-mono">{{ count }}</span>
