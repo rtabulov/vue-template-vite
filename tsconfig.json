@@ -1,4 +1,7 @@
 {
+  "paths": {
+    "@/*": ["./src/*"]
+  },
   "compilerOptions": {
     "target": "esnext",
     "useDefineForClassFields": true,
