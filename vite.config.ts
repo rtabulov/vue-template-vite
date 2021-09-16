@@ -16,13 +16,13 @@ import path from 'path';
 export default defineConfig({
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
+      '@': path.resolve(__dirname, 'src'),
     },
   },
 
   plugins: [
     vue(),
-    Pages(),
+    Pages({ pagesDir: 'src/pages', importMode: 'async' }),
     viteComponents(),
     vueI18n({
       compositionOnly: true,

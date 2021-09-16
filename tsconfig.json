@@ -1,8 +1,10 @@
 {
+  "root": true,
   "paths": {
     "@/*": ["./src/*"]
   },
   "compilerOptions": {
+    "types": ["vite/client"],
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",
