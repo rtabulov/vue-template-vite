@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import viteComponents from 'vite-plugin-components';
+import Components from 'unplugin-vue-components/vite';
 import vueI18n from '@intlify/vite-plugin-vue-i18n';
 import eslintPlugin from 'vite-plugin-eslint';
 import viteSvgIcons from 'vite-plugin-svg-icons';
@@ -23,7 +23,7 @@ export default defineConfig({
   plugins: [
     vue(),
     Pages({ pagesDir: 'src/pages', importMode: 'async' }),
-    viteComponents(),
+    Components({ dts: true, dirs: ['src/components'] }),
     vueI18n({
       compositionOnly: true,
       fullInstall: false,
