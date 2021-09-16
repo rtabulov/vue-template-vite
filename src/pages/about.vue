@@ -2,7 +2,7 @@
 import { useHead } from '@vueuse/head';
 
 useHead({
-  title: 'Home',
+  title: 'About',
 });
 
 const links = [
