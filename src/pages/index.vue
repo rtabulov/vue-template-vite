@@ -1,3 +1,11 @@
+<script lang="ts" setup>
+import { useHead } from '@vueuse/head';
+
+useHead({
+  title: 'Home',
+});
+</script>
+
 <template>
   <div class="flex items-center justify-center mb-12 space-x-6">
     <a href="https://vitejs.dev/guide/features.html" target="_blank"

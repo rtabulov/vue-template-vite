@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import { useHead } from '@vueuse/head';
+
+useHead({
+  title: 'Home',
+});
+
 const links = [
   {
     href: 'https://github.com/vueuse/vueuse',
@@ -28,7 +34,7 @@ const links = [
 </script>
 
 <template>
-  <h1 class="text-3xl mb-8">credits</h1>
+  <h1 class="text-3xl mb-8">{{ $t('credits') }}</h1>
 
   <ul>
     <li v-for="link in links" :key="link.href" class="mb-4">

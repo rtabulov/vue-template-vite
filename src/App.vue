@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { useDark } from '@vueuse/core';
+import { useDark, useLocalStorage } from '@vueuse/core';
+import { useI18n } from 'vue-i18n';
 
 useDark();
+useLocalStorage('locale', useI18n().locale);
 </script>
 
 <template>
@@ -16,24 +18,19 @@ useDark();
     "
   >
     <div class="space-x-4 mb-12">
-      <router-link class="hover:opacity-50 transition-opacity underline" to="/"
-        >home</router-link
+      <router-link
+        class="hover:opacity-50 transition-opacity underline"
+        to="/"
+        >{{ $t('home') }}</router-link
       >
 
       <router-link
         class="hover:opacity-50 transition-opacity underline"
         to="/about"
-        >about</router-link
+        >{{ $t('about') }}</router-link
       >
     </div>
 
     <router-view />
   </div>
 </template>
-
-<style>
-body {
-  font-family: 'Mont', 'Montserrat', 'Roboto', Avenir, Helvetica, Arial,
-    sans-serif;
-}
-</style>

@@ -8,6 +8,6 @@ declare module '*.vue' {
 }
 
 interface ImportMetaEnv {
-  // VITE_APP_TITLE: string;
+  VITE_APP_TITLE: string;
   // more env variables...
 }
