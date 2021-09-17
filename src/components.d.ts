@@ -4,11 +4,11 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    AppButton: typeof import('./components/AppButton.vue')['default']
-    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
-    LocaleSwitcher: typeof import('./components/LocaleSwitcher.vue')['default']
-    SvgIcon: typeof import('./components/SvgIcon.vue')['default']
+    AppButton: typeof import('./components/AppButton.vue')['default'];
+    HelloWorld: typeof import('./components/HelloWorld.vue')['default'];
+    LocaleSwitcher: typeof import('./components/LocaleSwitcher.vue')['default'];
+    SvgIcon: typeof import('./components/SvgIcon.vue')['default'];
   }
 }
 
-export { }
+export {};
