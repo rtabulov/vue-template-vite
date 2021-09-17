@@ -23,7 +23,7 @@ export default defineConfig({
   plugins: [
     vue(),
     Pages({ pagesDir: 'src/pages', importMode: 'async' }),
-    Components({ dts: true, dirs: ['src/components'] }),
+    Components({ dts: 'src/components.d.ts', dirs: ['src/components'] }),
     vueI18n({
       compositionOnly: true,
       fullInstall: false,
